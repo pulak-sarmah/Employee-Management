@@ -1,16 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { ActivityIndicator, View } from "react-native";
 
-const index = () => {
+const StartPage = () => {
   return (
-    <View>
-      <Text>index</Text>
+    <View style={{ flex: 1, justifyContent: "center" }}>
+      <ActivityIndicator size="large" color="#0000ff" />
     </View>
   );
 };
 
-export default index;
-
-const styles = StyleSheet.create({});
-
-// "/"
+export default StartPage;
