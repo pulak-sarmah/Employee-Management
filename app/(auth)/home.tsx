@@ -9,8 +9,10 @@ import {
 } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { Entypo } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 const Home = () => {
+  const router = useRouter();
   return (
     <ScrollView>
       <LinearGradient colors={["#7F7FD5", "#e9e4f0"]} style={{ flex: 1 }}>
@@ -38,6 +40,7 @@ const Home = () => {
             }}
           >
             <Pressable
+              onPress={() => router.push("/(auth)/employees")}
               style={{
                 backgroundColor: "#D3CCE3",
                 padding: 12,

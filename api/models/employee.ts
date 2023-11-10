@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 const employeeSchema = new mongoose.Schema({
   employeeId: { type: String, required: true, unique: true },
   employeeName: { type: String, require: true },
@@ -11,5 +13,4 @@ const employeeSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-const Employee = mongoose.model("Employee", employeeSchema);
-module.exports = Employee;
+export const Employee = mongoose.model("Employee", employeeSchema);

@@ -40,6 +40,7 @@ const Layout = () => {
         }}
         redirect={!isSignedIn}
       />
+      <Stack.Screen name="employees" />
     </Tabs>
     // <Stack
     //   screenOptions={{ headerLeft: () => <LogoutButton />, headerShown: false }}

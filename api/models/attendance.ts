@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 const attendenceSchema = new mongoose.Schema({
   employeeId: { type: String, required: true },
   employeeName: { type: String, required: true },
@@ -5,5 +7,4 @@ const attendenceSchema = new mongoose.Schema({
   status: { type: String, required: true },
 });
 
-const Attendance = mongoose.model("Attendence", attendenceSchema);
-module.exports = Attendance;
+export const Attendance = mongoose.model("Attendence", attendenceSchema);
