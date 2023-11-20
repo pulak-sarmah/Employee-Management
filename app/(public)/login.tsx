@@ -55,19 +55,19 @@ const Login = () => {
         value={password}
         onChangeText={setPassword}
         secureTextEntry
-        style={styles.inputField}
+        style={[styles.inputField, styles.pressable]}
       />
 
-      <Button onPress={onSignInPress} title="Login" color={"#6c47ff"}></Button>
+      <Button onPress={onSignInPress} title="Login" color={"#7F7FD5"}></Button>
 
       <Link href="/reset" asChild>
         <Pressable style={styles.button}>
-          <Text>Forgot password?</Text>
+          <Text style={{ color: "#0000EE" }}>Forgot password?</Text>
         </Pressable>
       </Link>
       <Link href="/register" asChild>
         <Pressable style={styles.button}>
-          <Text>Create Account</Text>
+          <Text style={{ color: "#0000EE" }}>Create Account</Text>
         </Pressable>
       </Link>
     </View>
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 20,
+    backgroundColor: "#e5e5f6",
   },
   inputField: {
     marginVertical: 4,
@@ -86,12 +87,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#6c47ff",
     borderRadius: 4,
-    padding: 10,
+    padding: 15,
     backgroundColor: "#fff",
   },
   button: {
     margin: 8,
     alignItems: "center",
+  },
+  pressable: {
+    marginBottom: 15,
   },
 });
 

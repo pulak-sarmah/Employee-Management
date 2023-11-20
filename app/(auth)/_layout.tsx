@@ -21,18 +21,15 @@ const Layout = () => {
   const { isSignedIn } = useAuth();
 
   return (
-    <Tabs
+    <Stack
       screenOptions={{
         headerStyle: {
           backgroundColor: "#fff",
         },
         headerTintColor: "#000",
-        tabBarStyle: {
-          display: "none",
-        },
       }}
     >
-      <Tabs.Screen
+      <Stack.Screen
         name="home"
         options={{
           headerTitle: "Home",
@@ -40,13 +37,21 @@ const Layout = () => {
         }}
         redirect={!isSignedIn}
       />
-      <Stack.Screen name="employees" />
-    </Tabs>
-    // <Stack
-    //   screenOptions={{ headerLeft: () => <LogoutButton />, headerShown: false }}
-    // >
-    //   <Stack.Screen name="home" />
-    // </Stack>
+
+      <Stack.Screen
+        name="employees"
+        options={{
+          headerTitle: "Employee List",
+        }}
+      />
+
+      <Stack.Screen
+        name="adddetails"
+        options={{
+          headerTitle: "Add Employee",
+        }}
+      />
+    </Stack>
   );
 };
 

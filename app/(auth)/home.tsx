@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <ScrollView>
       <LinearGradient colors={["#7F7FD5", "#e9e4f0"]} style={{ flex: 1 }}>
-        <View style={{ padding: 12 }}>
+        <View style={{ padding: 15 }}>
           <View
             style={{
               flexDirection: "row",
@@ -25,7 +25,7 @@ const Home = () => {
             }}
           >
             <Feather name="bar-chart" size={24} color="black" />
-            <Text style={{ fontSize: 16, fontWeight: "600" }}>
+            <Text style={{ fontSize: 18, fontWeight: "600" }}>
               Employee Management System
             </Text>
             <Entypo name="lock" size={24} color="black" />
@@ -33,7 +33,7 @@ const Home = () => {
 
           <View
             style={{
-              marginTop: 20,
+              marginTop: 25,
               flexDirection: "row",
               alignItems: "center",
               gap: 20,
@@ -43,7 +43,7 @@ const Home = () => {
               onPress={() => router.push("/(auth)/employees")}
               style={{
                 backgroundColor: "#D3CCE3",
-                padding: 12,
+                padding: 20,
                 borderRadius: 6,
                 alignItems: "center",
                 justifyContent: "center",
@@ -70,7 +70,7 @@ const Home = () => {
             <Pressable
               style={{
                 backgroundColor: "#D3CCE3",
-                padding: 12,
+                padding: 20,
                 borderRadius: 6,
                 alignItems: "center",
                 justifyContent: "center",

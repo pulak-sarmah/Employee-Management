@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { config } from "dotenv";
 import bodyParser from "body-parser";
 
-const app: Express = express();
+const app: Express = express(); 
 const port = 7001;
 import cors from "cors";
 
